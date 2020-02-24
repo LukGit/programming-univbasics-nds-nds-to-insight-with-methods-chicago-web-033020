@@ -6,7 +6,6 @@ require 'directors_database'
 def gross_for_director(director_data)
   counter2 = 0 
   grossdir = 0
-  puts "counter1 is #{count}"
   while counter2 < director_data.length do
     grossdir += director_data[counter2][:worldwide_gross]
     counter2 += 1 
@@ -23,7 +22,7 @@ def directors_totals(nds)
   counter1 = 0 
   while counter1 < nds.length do
     name = nds[counter1][:name]
-    directorgr = gross_for_director(nds[counter1][:movies], counter1)
+    directorgr = gross_for_director(nds[counter1][:movies])
     result[name] = directorgr
     pp result
     counter1 += 1 
